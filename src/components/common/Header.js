@@ -4,29 +4,28 @@ import { Text, View } from 'react-native';
 
 // make a Component
 const Header = (props) => {
-    const {titleStyle, headerContainer} = styles;
+    const {textStyle, viewStyle} = styles;
     return (
-        <View style={headerContainer}>
-            <Text style={titleStyle}>{props.title}</Text>
+        <View style={viewStyle}>
+            <Text style={textStyle}>{props.headerText}</Text>
         </View>
     );
 };
 const styles = {
-    headerContainer: {
-        paddingTop: 15,
-        height: 56,
-        alignItems: 'center',
+    viewStyle: {
+        backgroundColor: '#F8F8F8',
         justifyContent: 'center',
-        backgroundColor: '#f39c12',
+        alignItems: 'center',
+        height: 60,
+        paddingTop: 15,
         shadowColor: '#000',
-        shadowOffset: {width: 0, height: 2 },
+        shadowOffset: { width: 0, height: 2},
         shadowOpacity: 0.2,
         elevation: 2,
         position: 'relative'
     },
-    titleStyle: {
+    textStyle: {
         fontSize: 20,
-        color: '#FFF'
     }
 
 };
